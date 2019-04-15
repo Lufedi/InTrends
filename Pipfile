@@ -6,7 +6,6 @@ name = "pypi"
 [packages]
 python-linkedin = "*"
 flask = "*"
-linkedin-api = "*"
 flask-sqlalchemy = "*"
 flask-migrate = "*"
 schedule = "*"

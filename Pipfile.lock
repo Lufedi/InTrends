@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "4d120b27e5a813c8feb9a22b7746bb08220ea299cf423b0eda67d9a43fd3ba5d"
+            "sha256": "976417e2407ba2beb813c3daf357a5f3fe4138b67a8a0e5ea075fe35c4383423"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -111,14 +111,6 @@
                 "sha256:14dd6caf1527abb21f08f86c784eac40853ba93edb79552aa1e4b8aef1b61c7b"
             ],
             "version": "==2.10.1"
-        },
-        "linkedin-api": {
-            "hashes": [
-                "sha256:97b905e7ae7f25b69140902f6bf861427ebd0d6d7a86af682b02e537ea3efe9b",
-                "sha256:ee09ed0753d6a611ad79f7ab33be75bf505dd0f97702a123447107f219f6678a"
-            ],
-            "index": "pypi",
-            "version": "==1.1.0"
         },
         "mako": {
             "hashes": [
