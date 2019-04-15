@@ -8,7 +8,7 @@ logger = logging.getLogger(__name__)
 
 
 class ChallengeException(Exception):
-    pass
+    logger.info(Exception)
 
 
 class UnauthorizedException(Exception):
