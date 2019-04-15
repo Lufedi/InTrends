@@ -99,13 +99,13 @@ class Client(object):
         payload = {
             "session_key": username,
             "session_password": password,
-            #"JSESSIONID": self.session.cookies["JSESSIONID"],
+            "JSESSIONID": self.session.cookies["JSESSIONID"],
         }
 
         res = requests.post(
             f"{Client.AUTH_BASE_URL}/uas/authenticate",
             data=payload,
-            #cookies=self.session.cookies,
+            cookies=self.session.cookies,
             headers=Client.AUTH_REQUEST_HEADERS,
         )
 
