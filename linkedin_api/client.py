@@ -92,7 +92,7 @@ class Client(object):
         """
         Authenticate with Linkedin.
 
-        Return a session object that is authenticated.
+        Return a session object that is authenticated.ss
         """
         self._set_session_cookies(self._request_session_cookies())
 
