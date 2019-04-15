@@ -101,7 +101,7 @@ class Client(object):
         payload = {
             "session_key": username,
             "session_password": password,
-            "JSESSIONID": self.session.cookies["JSESSIONID"],
+            #"JSESSIONID": self.session.cookies["JSESSIONID"],
         }
 
         res = requests.post(
