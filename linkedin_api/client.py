@@ -46,7 +46,8 @@ class Client(object):
         "User-Agent": "LinkedIn/8.8.1 CFNetwork/711.3.18 Darwin/14.0.0",
         "X-User-Language": "en",
         "X-User-Locale": "en_US",
-        "Accept-Language": "en-us"    }
+        "Accept-Language": "en-us",
+        'Cookie': '_ga=GA1.2.1290526053.1546130182; _guid=1f130f8e-10b5-46eb-8608-910b66396824; _lipt=CwEAAAFqH3p7POba_qe3xquhj0VpZodtr_obdaBjY8u9ZH7kG7ZldG7C0dX6JRhOq_WiSaWlhTtLfGU21K5NEv__3c1zpjxF5sGumOfZxSsdnDeuSezj450; aam_uuid=42108163156549490870948759212049868622; AMCV_14215E3D5995C57C0A495C55%40AdobeOrg=-1303530583%7CMCIDTS%7C18002%7CMCMID%7C42246536548095577801001351931554059397%7CMCAAMLH-1555911872%7C7%7CMCAAMB-1555911872%7CRKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y%7CMCOPTOUT-1555314272s%7CNONE%7CMCCIDH%7C-1777838976%7CvVersion%7C3.3.0; AMCVS_14215E3D5995C57C0A495C55%40AdobeOrg=1; bcookie="v=2&a1aaea54-0535-470c-8e21-9e3e782b9428"; lang=v=2&lang=en-us; li_oatml=AQHNFeKsf7WTwwAAAWoGHwa1qudf0BJ8MKOg6FvAUOA2m9Ev1j2DZIbhye_sFymOPhoBz5CcliF9pN7elVnFaU48K3m2gayg; liap=true; SID=c36769ef-3693-44d6-87bf-98e36f45e6f0; UserMatchHistory=AQLPN2h3mEJ9DwAAAWofh7MB26H-U9-CC4FLWjdeM1YXRgtQHluU8F4HThzQea0_GMizLx_GQGPKgCz2MQOAjR-IO7HTPtxMAp-EkZc-gmzSg4GV-FOE4a5LXA603HpzU7kHe5hxDZzOXo-knUWyXfCT2Jtttjc7l66vRZCywCifn2vmWrOTRXYCPQOgv2JrjlgLB1aGkPV7xVDHVp0KiOETlJUAAwanAcst; VID=V_2019_04_13_16_430454; bscookie="v=1&20190415063252e2a6758b-8318-4755-8f53-a57bbdb45599AQEe3qU_45pTb0cXm3sG5FulTiF8Ih51"; JSESSIONID="ajax:0979606192460024766"; li_at=AQEDASuLyVsD7TpMAAABahqueXYAAAFqPrr9dk4Af__xD1YHj4Qi39IeWN3IFLTewvARcBsRTmEA2JjisIEGC0owvW4R9Aq-bTdTlMHZYNuSKZCUoujUwZU4vG-oUDnWCExgSeaaQ0AWg0Ebk0KprfGE; sl=v=1&udiYU; visit=v=1&M; lidc="b=TGST05:g=1342:u=1:i=1555310083:t=1555312024:s=AQGT0FWSyRZv3JfpPFKg21MQaDHQQ7BE"'    }
 
     def __init__(self, debug=False, refresh_cookies=False):
         self.session = requests.session()
@@ -94,23 +95,22 @@ class Client(object):
 
         Return a session object that is authenticated.ss
         """
-        self._set_session_cookies(self._request_session_cookies())
+        #self._set_session_cookies(self._request_session_cookies())
 
         payload = {
             "session_key": username,
             "session_password": password,
-            "JSESSIONID": self.session.cookies["JSESSIONID"],
+            "JSESSIONID": 'ajax:0979606192460024766',
         }
 
         res = requests.post(
             f"{Client.AUTH_BASE_URL}/uas/authenticate",
             data=payload,
-            cookies=self.session.cookies,
             headers=Client.AUTH_REQUEST_HEADERS,
         )
 
         data = res.json()
-        logger.info(self.session.cookies)
+        #logger.info(self.session.cookies)
         logger.info('data')
         logger.info(data)
         if data and data["login_result"] != "PASS":
