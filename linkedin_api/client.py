@@ -111,7 +111,8 @@ class Client(object):
         )
 
         data = res.json()
-
+        logger.info('data')
+        logger.info(data)
         if data and data["login_result"] != "PASS":
             raise ChallengeException(data["login_result"])
 
@@ -120,5 +121,4 @@ class Client(object):
 
         if res.status_code != 200:
             raise Exception()
-
         self._set_session_cookies(res.cookies)
