@@ -94,18 +94,18 @@ class Client(object):
 
         Return a session object that is authenticated.
         """
-        self._set_session_cookies(self._request_session_cookies())
+        #self._set_session_cookies(self._request_session_cookies())
 
         payload = {
             "session_key": username,
             "session_password": password,
-            "JSESSIONID": self.session.cookies["JSESSIONID"],
+            #"JSESSIONID": self.session.cookies["JSESSIONID"],
         }
 
         res = requests.post(
             f"{Client.AUTH_BASE_URL}/uas/authenticate",
             data=payload,
-            cookies=self.session.cookies,
+            #cookies=self.session.cookies,
             headers=Client.AUTH_REQUEST_HEADERS,
         )
 
