@@ -111,6 +111,7 @@ class Client(object):
         )
 
         data = res.json()
+        logger.info(self.session.cookies)
         logger.info('data')
         logger.info(data)
         if data and data["login_result"] != "PASS":
