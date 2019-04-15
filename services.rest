@@ -1,0 +1,12 @@
+
+
+
+### terms
+GET http://localhost:5000/terms
+
+
+### jobs
+GET http://localhost:5000/terms/records?t=1
+
+
+### $ FLASK_APP=app.py flask run

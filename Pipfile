@@ -1,0 +1,21 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+python-linkedin = "*"
+flask = "*"
+linkedin-api = "*"
+flask-sqlalchemy = "*"
+flask-migrate = "*"
+schedule = "*"
+apscheduler = "*"
+flask-marshmallow = "*"
+gunicorn = "*"
+
+[dev-packages]
+pylint = "*"
+
+[requires]
+python_version = "3.6"

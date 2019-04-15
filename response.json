@@ -1,0 +1,142 @@
+{'data': {'metadata': {'locationInfo': {'locationId': 'us: 0', 'location': 'United States', '$type': 'com.linkedin.voyager.search.LocationInfo'
+            }, 'guides': [
+                {'displayText': 'All', 'type': 'VERTICAL', 'guideInfo': {'vertical': 'TOP', '$type': 'com.linkedin.voyager.search.VerticalGuide'
+                    }, 'urlParameter': 'v->TOP', 'selected': False, '$type': 'com.linkedin.voyager.search.Guide'
+                },
+                {'displayText': 'People', 'type': 'VERTICAL', 'guideInfo': {'vertical': 'PEOPLE', '$type': 'com.linkedin.voyager.search.VerticalGuide'
+                    }, 'urlParameter': 'v->PEOPLE', 'selected': False, '$type': 'com.linkedin.voyager.search.Guide'
+                },
+                {'displayText': 'Jobs', 'type': 'VERTICAL', 'guideInfo': {'vertical': 'JOBS', '$type': 'com.linkedin.voyager.search.VerticalGuide'
+                    }, 'urlParameter': 'v->JOBS', 'selected': True, '$type': 'com.linkedin.voyager.search.Guide'
+                },
+                {'displayText': 'Content', 'type': 'VERTICAL', 'guideInfo': {'vertical': 'CONTENT', '$type': 'com.linkedin.voyager.search.VerticalGuide'
+                    }, 'urlParameter': 'v->CONTENT', 'selected': False, '$type': 'com.linkedin.voyager.search.Guide'
+                },
+                {'displayText': 'Companies', 'type': 'VERTICAL', 'guideInfo': {'vertical': 'COMPANIES', '$type': 'com.linkedin.voyager.search.VerticalGuide'
+                    }, 'urlParameter': 'v->COMPANIES', 'selected': False, '$type': 'com.linkedin.voyager.search.Guide'
+                },
+                {'displayText': 'Groups', 'type': 'VERTICAL', 'guideInfo': {'vertical': 'GROUPS', '$type': 'com.linkedin.voyager.search.VerticalGuide'
+                    }, 'urlParameter': 'v->GROUPS', 'selected': False, '$type': 'com.linkedin.voyager.search.Guide'
+                },
+                {'displayText': 'Schools', 'type': 'VERTICAL', 'guideInfo': {'vertical': 'SCHOOLS', '$type': 'com.linkedin.voyager.search.VerticalGuide'
+                    }, 'urlParameter': 'v->SCHOOLS', 'selected': False, '$type': 'com.linkedin.voyager.search.Guide'
+                }
+            ], 'keywords': 'django2', 'taggedQueryKeyword': 'django2', 'origin': 'JOB_SEARCH_RESULTS_PAGE', 'taggedQueryType': '$UNKNOWN', 'suggestedFacets': [], 'sortBy': 'R', 'id': '6ab4f4ed-667c-427b-bb1c-15178430dc1c', 'type': 'JOBS', 'facets': [
+                {'facetTypeV2': 'EXPERIENCE', 'displayName': 'Experience Level', 'facetValues': [
+                        {'displayValue': 'Entry level', 'count': 3, 'value': '2', 'selected': False, '$type': 'com.linkedin.voyager.search.SearchFacetValue'
+                        },
+                        {'displayValue': 'Internship', 'count': 0, 'value': '1', 'selected': False, '$type': 'com.linkedin.voyager.search.SearchFacetValue'
+                        },
+                        {'displayValue': 'Associate', 'count': 0, 'value': '3', 'selected': False, '$type': 'com.linkedin.voyager.search.SearchFacetValue'
+                        },
+                        {'displayValue': 'Mid-Senior level', 'count': 0, 'value': '4', 'selected': False, '$type': 'com.linkedin.voyager.search.SearchFacetValue'
+                        },
+                        {'displayValue': 'Director', 'count': 0, 'value': '5', 'selected': False, '$type': 'com.linkedin.voyager.search.SearchFacetValue'
+                        },
+                        {'displayValue': 'Executive', 'count': 0, 'value': '6', 'selected': False, '$type': 'com.linkedin.voyager.search.SearchFacetValue'
+                        }
+                    ], 'facetParameterName': 'f_E', 'premiumFacet': False, '$type': 'com.linkedin.voyager.search.SearchFacet'
+                },
+                {'facetTypeV2': 'FUNCTION', 'displayName': 'Job Function', 'facetValues': [
+                        {'displayValue': 'Engineering', 'count': 4, 'value': 'eng', 'selected': False, '$type': 'com.linkedin.voyager.search.SearchFacetValue'
+                        },
+                        {'displayValue': 'Information Technology', 'count': 4, 'value': 'it', 'selected': False, '$type': 'com.linkedin.voyager.search.SearchFacetValue'
+                        },
+                        {'displayValue': 'Education', 'count': 1, 'value': 'edu', 'selected': False, '$type': 'com.linkedin.voyager.search.SearchFacetValue'
+                        }
+                    ], 'facetParameterName': 'f_F', 'premiumFacet': False, '$type': 'com.linkedin.voyager.search.SearchFacet'
+                },
+                {'facetTypeV2': 'INDUSTRY', 'displayName': 'Industry', 'facetValues': [
+                        {'displayValue': 'Computer Software', 'count': 4, 'value': '4', 'selected': False, '$type': 'com.linkedin.voyager.search.SearchFacetValue'
+                        },
+                        {'displayValue': 'Financial Services', 'count': 3, 'value': '43', 'selected': False, '$type': 'com.linkedin.voyager.search.SearchFacetValue'
+                        },
+                        {'displayValue': 'Information Technology and Services', 'count': 3, 'value': '96', 'selected': False, '$type': 'com.linkedin.voyager.search.SearchFacetValue'
+                        }
+                    ], 'facetParameterName': 'f_I', 'premiumFacet': False, '$type': 'com.linkedin.voyager.search.SearchFacet'
+                },
+                {'facetTypeV2': 'COMPANY', 'displayName': 'Company', 'facetValues': [
+                        {'displayValue': 'Integrate Tech, Inc.', 'count': 1, 'value': '10304299', 'selected': False, '$type': 'com.linkedin.voyager.search.SearchFacetValue'
+                        },
+                        {'displayValue': 'Open Systems Technologies', 'count': 1, 'value': '11655', 'selected': False, '$type': 'com.linkedin.voyager.search.SearchFacetValue'
+                        },
+                        {'displayValue': 'Acuity, Inc.', 'count': 1, 'value': '1375621', 'selected': False, '$type': 'com.linkedin.voyager.search.SearchFacetValue'
+                        },
+                        {'displayValue': 'Acuity Insurance', 'count': 1, 'value': '272517', 'selected': False, '$type': 'com.linkedin.voyager.search.SearchFacetValue'
+                        }
+                    ], 'facetParameterName': 'f_C', 'premiumFacet': False, '$type': 'com.linkedin.voyager.search.SearchFacet'
+                },
+                {'facetTypeV2': 'TIME_POSTED', 'displayName': 'Date Posted', 'facetValues': [
+                        {'displayValue': 'Past 24 hours', 'count': 0, 'value': '1', 'selected': False, '$type': 'com.linkedin.voyager.search.SearchFacetValue'
+                        },
+                        {'displayValue': 'Past Week', 'count': 0, 'value': '1,
+                            2', 'selected': False, '$type': 'com.linkedin.voyager.search.SearchFacetValue'
+                        },
+                        {'displayValue': 'Past Month', 'count': 1, 'value': '1,
+                            2,
+                            3,
+                            4', 'selected': False, '$type': 'com.linkedin.voyager.search.SearchFacetValue'
+                        },
+                        {'displayValue': 'Any Time', 'count': 4, 'value': '', 'selected': True, '$type': 'com.linkedin.voyager.search.SearchFacetValue'
+                        }
+                    ], 'facetParameterName': 'f_TP', 'premiumFacet': False, '$type': 'com.linkedin.voyager.search.SearchFacet'
+                },
+                {'facetTypeV2': 'GEO_CITY', 'displayName': 'Location', 'facetValues': [
+                        {'displayValue': 'New York, NY', 'count': 2, 'value': 'us.3-2-0-31-1', 'selected': False, '$type': 'com.linkedin.voyager.search.SearchFacetValue'
+                        },
+                        {'displayValue': 'Arlington, VA', 'count': 2, 'value': 'us.8-8-0-8-1', 'selected': False, '$type': 'com.linkedin.voyager.search.SearchFacetValue'
+                        }
+                    ], 'facetParameterName': 'f_GC', 'premiumFacet': False, '$type': 'com.linkedin.voyager.search.SearchFacet'
+                },
+                {'facetTypeV2': 'TITLE', 'displayName': 'Title', 'facetValues': [
+                        {'displayValue': 'Web Developer', 'count': 2, 'value': '100', 'selected': False, '$type': 'com.linkedin.voyager.search.SearchFacetValue'
+                        },
+                        {'displayValue': 'Django Developer', 'count': 1, 'value': '25183', 'selected': False, '$type': 'com.linkedin.voyager.search.SearchFacetValue'
+                        },
+                        {'displayValue': 'Full Stack Engineer', 'count': 1, 'value': '25201', 'selected': False, '$type': 'com.linkedin.voyager.search.SearchFacetValue'
+                        }
+                    ], 'facetParameterName': 'f_T', 'premiumFacet': False, '$type': 'com.linkedin.voyager.search.SearchFacet'
+                },
+                {'facetTypeV2': 'JOB_TYPE', 'displayName': 'Job Type', 'facetValues': [
+                        {'displayValue': 'Full-time', 'count': 3, 'value': 'F', 'selected': False, '$type': 'com.linkedin.voyager.search.SearchFacetValue'
+                        },
+                        {'displayValue': 'Contract', 'count': 1, 'value': 'C', 'selected': False, '$type': 'com.linkedin.voyager.search.SearchFacetValue'
+                        }
+                    ], 'facetParameterName': 'f_JT', 'premiumFacet': False, '$type': 'com.linkedin.voyager.search.SearchFacet'
+                },
+                {'facetTypeV2': 'LINKEDIN_FEATURES', 'displayName': 'LinkedIn Features', 'facetValues': [
+                        {'displayValue': 'In Your Network', 'count': 0, 'value': 'f_JIYN', 'selected': False, '$type': 'com.linkedin.voyager.search.SearchFacetValue'
+                        },
+                        {'displayValue': 'Easy Apply', 'count': 1, 'value': 'f_AL', 'selected': False, '$type': 'com.linkedin.voyager.search.SearchFacetValue'
+                        },
+                        {'displayValue': 'Under 10 Applicants', 'count': 3, 'value': 'f_EA', 'selected': False, '$type': 'com.linkedin.voyager.search.SearchFacetValue'
+                        }
+                    ], 'facetParameterName': 'f_LF', '$type': 'com.linkedin.voyager.search.SearchFacet'
+                }
+            ], '$type': 'com.linkedin.voyager.search.SearchMetadata'
+        }, 'elements': [
+            {'targetPageInstance': 'urn:li:page:d_flagship3_job_details;/jLqOaqFQICxtz7nYUdfUw==', '*hitInfo': 'urn:li:fs_searchJobJserp:urn:li:fs_normalized_jobPosting: 1187572098', 'trackingId': 'WjVY/b+XRTezxb+EY3Auag==', '$type': 'com.linkedin.voyager.search.SearchHit'
+            },
+            {'targetPageInstance': 'urn:li:page:d_flagship3_job_details;K1JKIUf2QEy6enuB9j9A7Q==', '*hitInfo': 'urn:li:fs_searchJobJserp:urn:li:fs_normalized_jobPosting: 1074984867', 'trackingId': '4bgR/qfUTDWXyd+bvkkoxA==', '$type': 'com.linkedin.voyager.search.SearchHit'
+            },
+            {'targetPageInstance': 'urn:li:page:d_flagship3_job_details;mxONtgkHQT+Lf/RiyVjXJw==', '*hitInfo': 'urn:li:fs_searchJobJserp:urn:li:fs_normalized_jobPosting: 1189398085', 'trackingId': 'A5lzFk+mSt6u2uu8odIegA==', '$type': 'com.linkedin.voyager.search.SearchHit'
+            },
+            {'targetPageInstance': 'urn:li:page:d_flagship3_job_details;Smk04ihsTSOCjYQdyjTfHQ==', '*hitInfo': 'urn:li:fs_searchJobJserp:urn:li:fs_normalized_jobPosting: 1073623153', 'trackingId': 'LPWrLQ8rQUi8iDhiLDAeyw==', '$type': 'com.linkedin.voyager.search.SearchHit'
+            }
+        ], 'paging': {'total': 4, 'count': 49, 'start': 0, 'links': []
+        }
+    }, 'included': [
+        {'encryptedBiddingParameters': 'CwEAAAFqGgXLvL5_cm4bBYnotpo_RxqsBedN7yJZIp67hl0SSlIVXviwOTZt6cU3DoErCVIWEZjCDfkgd3IzmHYU1Puet-FLMXBIvSk-9tra7YZI-uH9Icsf0h_pMTlAxqCReJSKhWyYuEY4tVazIupqx9yOAOXKDLm4u-NDoXJ3HInif34n2kh8ZAY19mu2uwoIABYDFXzMrFwLuFmCDqLi4KmoVuhLuNXJgCX1LInvWwZk7lhzxXypHhGHMZ_X5dwFmZm60TQgTrvQ515fp7rcGOiFea73t9aJxZcnHTFRqXU3ITR9pnaQuNCwYXeIEBP5iNnqj1cvxD7XfLwpZdXhsAxVfhWUm3UZEipd49hccAYjcANqqteGltBO_3bJyg', '$deletedFields': ['score', 'explanation'
+            ], 'entityUrn': 'urn:li:fs_searchJobJserp:urn:li:fs_normalized_jobPosting: 1187572098', 'jobPosting': 'urn:li:fs_normalized_jobPosting: 1187572098', 'sponsored': True, 'descriptionSnippet': 'We are looking for a Django developer with extensive experience using Python as a server language as opposed to data science. Candidate should have experience designing, ...', '$type': 'com.linkedin.voyager.search.SearchJobJserp'
+        },
+        {'encryptedBiddingParameters': 'NotAvailableFromVoyagerAPI', '$deletedFields': ['score', 'explanation'
+            ], 'entityUrn': 'urn:li:fs_searchJobJserp:urn:li:fs_normalized_jobPosting: 1073623153', 'jobPosting': 'urn:li:fs_normalized_jobPosting: 1073623153', 'sponsored': False, 'descriptionSnippet': 'You&#x2019;ll work with our team of developers, designers, and testers to develop and maintain web applications using HTML, CSS, Javascript, Bootstrap, jQuery, React.JS, Node.JS and ...', '$type': 'com.linkedin.voyager.search.SearchJobJserp'
+        },
+        {'encryptedBiddingParameters': 'NotAvailableFromVoyagerAPI', '$deletedFields': ['score', 'explanation'
+            ], 'entityUrn': 'urn:li:fs_searchJobJserp:urn:li:fs_normalized_jobPosting: 1074984867', 'jobPosting': 'urn:li:fs_normalized_jobPosting: 1074984867', 'sponsored': False, 'descriptionSnippet': 'You&#x2019;ll work with our team of developers, designers, and testers to develop and maintain web applications using HTML, CSS, Javascript, Bootstrap, jQuery, React.JS, Node.JS and ...', '$type': 'com.linkedin.voyager.search.SearchJobJserp'
+        },
+        {'encryptedBiddingParameters': 'NotAvailableFromVoyagerAPI', '$deletedFields': ['score', 'explanation'
+            ], 'entityUrn': 'urn:li:fs_searchJobJserp:urn:li:fs_normalized_jobPosting: 1189398085', 'jobPosting': 'urn:li:fs_normalized_jobPosting: 1189398085', 'sponsored': False, 'descriptionSnippet': '3+ years of experience with scripting languages, such as Javascript, Python, R, Ruby, or Perl. 3+ years of experience with object-oriented languages, such as C, C++, Java, Scala...', '$type': 'com.linkedin.voyager.search.SearchJobJserp'
+        }
+    ]
+}
