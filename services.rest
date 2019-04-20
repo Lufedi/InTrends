@@ -1,6 +1,8 @@
 
-
-
+@clientid = 78n9f0k42xu69u
+@clientsecret = Je1WU32c8MZDZGN8
+@granttype = client_credentials
+@linkedinauth = https://www.linkedin.com/oauth/v2/authorization
 ### terms
 GET http://localhost:5000/terms
 
@@ -8,5 +10,6 @@ GET http://localhost:5000/terms
 ### jobs
 GET http://localhost:5000/terms/records?t=1
 
-
+### auth header
+POST {{linkedinauth}}?grant_type={{granttype}}&client_id={{clientid}}&client_secret={{clientsecret}}
 ### $ FLASK_APP=app.py flask run
