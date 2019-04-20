@@ -43,7 +43,7 @@ def jobs():
 
 
 @app.route("/query")
-def hello():
+def query():
     services.query_updates()
     return "done"
 
