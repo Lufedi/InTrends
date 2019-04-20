@@ -24,5 +24,5 @@ def query_updates():
         })
         job = Job(location=location_id, total=_total, term=term)
         app.logger.info(f'updated {term.term} : {_total}')
-        #db.session.add(job)
-        #db.session.commit()
+        db.session.add(job)
+        db.session.commit()

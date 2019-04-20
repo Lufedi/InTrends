@@ -41,6 +41,14 @@ def jobs():
     result = schema.dump(jobs).data
     return jsonify(result)
 
+
+@app.route("/query")
+def hello():
+    services.query_updates()
+    return "done"
+
+
+
 '''
 
 
