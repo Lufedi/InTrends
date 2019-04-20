@@ -6,7 +6,6 @@ name = "pypi"
 [packages]
 python-linkedin = "*"
 flask = "*"
-linkedin-api = "*"
 flask-sqlalchemy = "*"
 flask-migrate = "*"
 schedule = "*"
@@ -17,4 +16,4 @@ flask-marshmallow = "*"
 pylint = "*"
 
 [requires]
-python_version = "3.6"
+python_version = "3.7"
