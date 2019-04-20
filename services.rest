@@ -6,10 +6,16 @@
 ### terms
 GET http://localhost:5000/terms
 
-
 ### jobs
 GET http://localhost:5000/terms/records?t=1
 
 ### auth header
 POST {{linkedinauth}}?grant_type={{granttype}}&client_id={{clientid}}&client_secret={{clientsecret}}
 ### $ FLASK_APP=app.py flask run
+
+### jobs
+GET http://localhost:5000/jobs
+ 
+### total jobs
+GET http://localhost:5000/jobs/total
+

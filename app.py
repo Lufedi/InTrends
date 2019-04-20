@@ -18,26 +18,26 @@ from services import query_service
 
 from dto.dtos import *
 from services.term_service import TermService
-termService = TermService()
-
+from services.job_service import JobService
+term_service = TermService()
+job_service = JobService()
 
 @app.route("/")
 def hello():
     return "Hello World!"
 
-
 @app.route("/terms")
 def terms():
-    terms = termService.get_terms()
+    terms = term_service.get_terms()
     schema = TermSchema(many=True)
     result = schema.dump(terms).data
     return jsonify(result)
 
 @app.route("/terms/records")
-def jobs():
+def jobs_by_term():
     term = request.args.get('t')
     schema = JobsSchema(many=True)
-    jobs = termService.get_jobs(term)
+    jobs = term_service.get_jobs(term)
     result = schema.dump(jobs).data
     return jsonify(result)
 
@@ -48,11 +48,16 @@ def query():
     return "done"
 
 
+@app.route("/jobs")
+def jobs():
+    schema = JobsSchema(many=True)
+    jobs = job_service.get_jobs()
+    result = schema.dump(jobs).data
+    return jsonify(result)
 
-'''
-
-
-'''
+@app.route("/jobs/total")
+def total_jobs():
+    return str(job_service.total())
 
 '''t = Term.query.get(1)
 j = Job(location='us:0', total=100000, term=t)
