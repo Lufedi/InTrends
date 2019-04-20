@@ -44,7 +44,7 @@ def jobs():
 
 @app.route("/query")
 def query():
-    services.query_updates()
+    query_service.query_updates()
     return "done"
 
 
