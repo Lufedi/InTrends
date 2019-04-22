@@ -26,3 +26,4 @@ def query_updates():
         app.logger.info(f'updated {term.term} : {_total}')
         db.session.add(job)
         db.session.commit()
+    app.logger.info("finished querying")
