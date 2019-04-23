@@ -19,12 +19,18 @@ from services import query_service
 from dto.dtos import *
 from services.term_service import TermService
 from services.job_service import JobService
+
+
 term_service = TermService()
 job_service = JobService()
 
 @app.route("/")
 def hello():
-    return "Hello World!"
+    return "Welcome to InTrends"
+
+@app.route("/schedules")
+def schedules():
+    return jsonify(cron.get_schedules())
 
 @app.route("/terms")
 def terms():
