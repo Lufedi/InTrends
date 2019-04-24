@@ -1,12 +1,24 @@
 
 import React, { Component } from 'react'
-import InputLabel from '@material-ui/core/InputLabel';
-import MenuItem from '@material-ui/core/MenuItem';
-import FormControl from '@material-ui/core/FormControl';
-import Select from '@material-ui/core/Select';
-import { withStyles } from '@material-ui/core';
+import InputLabel from '@material-ui/core/InputLabel'
+import MenuItem from '@material-ui/core/MenuItem'
+import FormControl from '@material-ui/core/FormControl'
+import Select from '@material-ui/core/Select'
+import { withStyles } from '@material-ui/core'
 import { getTerms } from '../services/TermService'
 import { getJobs } from '../services/JobService'
+import moment from 'moment'
+import {
+  CartesianGrid,
+  Legend,
+  ResponsiveContainer,
+  Scatter,
+  ScatterChart,
+  Tooltip,
+  XAxis,
+  YAxis,
+} from 'recharts'
+
 const styles = theme => ({
   root: {
     display: 'flex',
@@ -29,6 +41,7 @@ class MainPage extends Component {
       terms: [],
       term: '',
       jobs: [],
+      chartData: [],
       selectedTerm: null
     }
     this.getTerms = this.getTerms.bind(this)
@@ -40,9 +53,9 @@ class MainPage extends Component {
       const res = await getTerms()
       let terms = []
       if (res.status == 200) {
-        terms = res.data  
+        terms = res.data
       }
-      
+
       console.log(terms)
       this.setState({
         terms
@@ -57,14 +70,19 @@ class MainPage extends Component {
     try {
       const res = await getJobs(termId)
       let jobs = null
-      if(res.status == 200){
+      if (res.status == 200) {
         jobs = res.data
       }
       console.log(jobs)
-      this.setState([
-        jobs
-      ])
-      
+      const chartData = jobs.map(job => ({
+          value: job.total,
+          time: job.created_at
+        }))
+      this.setState({
+        jobs,
+        chartData
+      })
+
     } catch (e) {
       console.error(e)
       throw e
@@ -86,27 +104,53 @@ class MainPage extends Component {
     } = this.props
 
     const {
-      terms
+      terms,
+      chartData
     } = this.state
     return (
-      <FormControl className={classes.formControl}>
-        <InputLabel htmlFor="age-simple">Term</InputLabel>
-        <Select
-          value={this.state.term}
-          onChange={this.handleChange}
-          inputProps={{
-            name: 'term',
-            id: 'term',
-          }}
-        >
-          <MenuItem value="">
-            <em>Select a term</em>
-          </MenuItem>
-          {terms.map(term => (
-            <MenuItem value={term.id} key={term.id}>{term.term}</MenuItem>
-          ))}
-        </Select>
-      </FormControl>
+      <div>
+        <FormControl className={classes.formControl}>
+          <InputLabel htmlFor="age-simple">Term</InputLabel>
+          <Select
+            value={this.state.term}
+            onChange={this.handleChange}
+            inputProps={{
+              name: 'term',
+              id: 'term',
+            }}
+          >
+            <MenuItem value="">
+              <em>Select a term</em>
+            </MenuItem>
+            {terms.map(term => (
+              <MenuItem value={term.id} key={term.id}>{term.term}</MenuItem>
+            ))}
+          </Select>
+        </FormControl>
+
+        <ResponsiveContainer width='95%' height={500} >
+          <ScatterChart>
+            <XAxis
+              dataKey='time'
+              domain={['auto', 'auto']}
+              name='Time'
+              tickFormatter={(tick) => moment(tick).format('HH:mm') }
+              type='number'
+          />
+            <YAxis dataKey='value' name='Value' />
+
+            <Scatter
+              data={chartData}
+              line={{ stroke: '#eee' }}
+              lineJointType='monotoneX'
+              lineType='joint'
+              name='Values'
+            />
+
+          </ScatterChart>
+        </ResponsiveContainer>
+      </div>
+
     )
 
   }
