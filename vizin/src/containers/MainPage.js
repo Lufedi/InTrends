@@ -6,7 +6,7 @@ import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import { withStyles } from '@material-ui/core';
 import { getTerms } from '../services/TermService'
-
+import { getJobs } from '../services/JobService'
 const styles = theme => ({
   root: {
     display: 'flex',
@@ -23,29 +23,61 @@ const styles = theme => ({
 
 
 class MainPage extends Component {
-  constructor(){
+  constructor() {
     super()
     this.state = {
       terms: [],
+      term: '',
+      jobs: [],
       selectedTerm: null
     }
     this.getTerms = this.getTerms.bind(this)
+    this.handleChange = this.handleChange.bind(this)
   }
-  
-  async getTerms(){
-    try{
-      const terms = await getTerms()
+
+  async getTerms() {
+    try {
+      const res = await getTerms()
+      let terms = []
+      if (res.status == 200) {
+        terms = res.data  
+      }
+      
       console.log(terms)
       this.setState({
         terms
       })
-    }catch(e){
+    } catch (e) {
       console.error(e)
       throw e
     }
   }
 
-  componentDidMount(){
+  async getJobs(termId) {
+    try {
+      const res = await getJobs(termId)
+      let jobs = null
+      if(res.status == 200){
+        jobs = res.data
+      }
+      console.log(jobs)
+      this.setState([
+        jobs
+      ])
+      
+    } catch (e) {
+      console.error(e)
+      throw e
+    }
+  }
+
+  handleChange(event) {
+    console.log(event.target)
+    this.setState({ [event.target.name]: event.target.value });
+    this.getJobs(event.target.value)
+  }
+
+  componentDidMount() {
     this.getTerms()
   }
   render() {
@@ -56,25 +88,25 @@ class MainPage extends Component {
     const {
       terms
     } = this.state
-    return(
+    return (
       <FormControl className={classes.formControl}>
-          <InputLabel htmlFor="age-simple">Term</InputLabel>
-          <Select
-            value={1}
-            onChange={this.handleChange}
-            inputProps={{
-              name: 'age',
-              id: 'age-simple',
-            }}
-          >
-            <MenuItem value="">
-              <em>Select a term</em>
-            </MenuItem>
-            { terms.map( term => (
-              <MenuItem value={term.id}>term.term</MenuItem>
-            ))}
-          </Select>
-        </FormControl>
+        <InputLabel htmlFor="age-simple">Term</InputLabel>
+        <Select
+          value={this.state.term}
+          onChange={this.handleChange}
+          inputProps={{
+            name: 'term',
+            id: 'term',
+          }}
+        >
+          <MenuItem value="">
+            <em>Select a term</em>
+          </MenuItem>
+          {terms.map(term => (
+            <MenuItem value={term.id} key={term.id}>{term.term}</MenuItem>
+          ))}
+        </Select>
+      </FormControl>
     )
 
   }
