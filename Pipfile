@@ -13,6 +13,7 @@ apscheduler = "*"
 flask-marshmallow = "*"
 gunicorn = "*"
 psycopg2-binary = "*"
+flask-cors = "*"
 
 [dev-packages]
 pylint = "*"
