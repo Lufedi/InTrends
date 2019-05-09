@@ -12,4 +12,3 @@ profile = api.searchTotal({
 })
 
 
-print(profile)

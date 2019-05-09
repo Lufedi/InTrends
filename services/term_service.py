@@ -9,5 +9,4 @@ class TermService(object):
     
     def get_jobs(self, termId):
         jobs = Job.query.filter_by(term_id = termId).all()
-        print(jobs)
         return jobs
